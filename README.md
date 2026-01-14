@@ -1,22 +1,24 @@
-## Hi there 👋
+# Real-Time Risk Scoring Lakehouse (Deep Learning + Data Engineering)
 
-<!--
-**dineshkgn/dineshkgn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-real-time-risk-scoring-lakehouse (new flagship, next section)
+Production-style system that ingests transaction events, builds features with online/offline parity, trains a deep tabular model, serves low-latency risk scores, and monitors drift + data quality.
 
-1 smaller “deep learning” repo (mini project)
+## Architecture (High Level)
+Kafka (events) → Streaming ETL → Bronze/Silver/Gold Lakehouse → Feature Pipeline → Model Training (PyTorch) → Model Registry → FastAPI Serving → Monitoring (DQ + Drift + Latency)
 
-1 smaller “data engineering” repo (pipeline/infra)
-Here are some ideas to get you started:
+## What’s inside
+- Streaming ingestion with schema validation + dead-letter handling
+- Lakehouse layout (Bronze/Silver/Gold)
+- Feature engineering (offline + online parity)
+- Deep learning for tabular data (embeddings + attention-based model)
+- FastAPI scoring service with p95 latency metrics
+- Drift monitoring + data quality checks
+- CI (lint/tests) + reproducible runs (Makefile + Docker)
 
--
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
- 🔭 I’m currently working on :
+## Quickstart
+```bash
+make up
+make produce-events
+make stream
+make train
+make serve
+make score

@@ -1,4 +1,4 @@
-## Architecture
+ Architecture
 
 ![Real-Time Risk Scoring Architecture](docs/architecture.png)
 

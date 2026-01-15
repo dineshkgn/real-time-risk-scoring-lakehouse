@@ -1,6 +1,6 @@
 ## Architecture
 
-![Real-Time Risk Scoring Architecture](docs/architecture.png)
+![Real-Time Risk Scoring Architecture](/architecture.png)
 
 This system demonstrates a production-style real-time ML scoring platform:
 

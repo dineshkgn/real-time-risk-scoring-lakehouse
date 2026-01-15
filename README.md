@@ -5,8 +5,9 @@ Production-style system that ingests transaction events, builds features with on
 ## Architecture (High Level)
 Kafka (events) → Streaming ETL → Bronze/Silver/Gold Lakehouse → Feature Pipeline → Model Training (PyTorch) → Model Registry → FastAPI Serving → Monitoring (DQ + Drift + Latency)
 
-![Real-Time Risk Scoring Architecture](docs/architecture.png)
+## Architecture
 
+<img src="docs/architecture.png" width="500" />
 
 ## What’s inside
 - Streaming ingestion with schema validation + dead-letter handling
